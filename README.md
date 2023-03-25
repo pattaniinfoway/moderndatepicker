@@ -1,6 +1,6 @@
 # DROPDOWN DATE PICKER LIBRARY #
 
-### Developed by Gautam Patani --> Founder & CEO @ Pattani Infoway Services Pvt Ltf  ###
+### Developed by Gautam Pattani   ###
 ### Minimum Target ###
 * Android 4.1
 * Madern Date Picker
