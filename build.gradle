@@ -1,0 +1,142 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlinVersion = '1.5.10'
+
+        // Sdk and tools
+        compileSdkVersion = 30
+        minSdkVersion = 21
+        targetSdkVersion = 30
+        buildToolsVersion = '30.0.2'
+
+        // App common versions
+        archVersion = '2.2.0'
+        appCompatVersion = '1.2.0'
+        playServicesVersion = '16.0.0'
+        //playServicesVersion = '18.0.2'
+        retrofitVersion = '2.9.0'
+        okhttp3Version = '4.9.0'
+        navigationVersion = '2.2.1'
+        pagingVersion = '2.1.0'
+        stethoVersion = '1.5.1'
+        koinVersion = '2.0.1'
+        exoPlayerVersion = '2.12.3'
+        appsflyerVersion = '6.2.3'
+
+        kizitonwoseVersion='1.0.4'
+
+
+        // Testing common versions
+        androidTestVersion = '1.0.0'
+        androidTestRunnerVersion = '1.1.0'
+
+        // App Dependencies
+        multidex = 'androidx.multidex:multidex:2.0.1'
+        ktx = "androidx.core:core-ktx:1.0.0"
+        kotlinLint = 'com.pinterest:ktlint:0.36.0'
+        kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+        kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+        javaxProcessor = 'javax.annotation:jsr250-api:1.0'
+
+        vectorDrawable = 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+        constraintLayout = 'androidx.constraintlayout:constraintlayout:2.1.0'
+        recyclerView = 'androidx.recyclerview:recyclerview:1.1.0'
+        appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
+        appCompatResources = "androidx.appcompat:appcompat-resources:$appCompatVersion"
+        cardView = 'androidx.cardview:cardview:1.0.0'
+        material = 'com.google.android.material:material:1.2.0-alpha06'
+        androidXAnnotations = 'androidx.annotation:annotation:1.0.2'
+        legacySupport = 'androidx.legacy:legacy-support-v4:1.0.0'
+
+        navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+        navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+        koin = "org.koin:koin-android-viewmodel:$koinVersion"
+        koinJava = "org.koin:koin-java:$koinVersion"
+
+        gson = 'com.google.code.gson:gson:2.8.5'
+        retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+        retrofitConverterGson = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+        okhttp3 = "com.squareup.okhttp3:okhttp:$okhttp3Version"
+        okhttp3Logging = "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
+
+        rxJava =  "io.reactivex.rxjava2:rxjava:2.2.8"
+        rxKotlin =  "io.reactivex.rxjava2:rxkotlin:2.4.0"
+        rxAndroid = "io.reactivex.rxjava2:rxandroid:2.1.1"
+        rxBinding = "com.jakewharton.rxbinding2:rxbinding:2.2.0"
+        rxRetrofitAdapter = "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+        eventBus = 'org.greenrobot:eventbus:3.1.1'
+
+        circularImageView = 'com.mikhaellopez:circularimageview:3.0.2'
+
+        //facebookSdk = 'com.facebook.android:facebook-android-sdk:latest.release'
+
+        glide = 'com.github.bumptech.glide:glide:4.10.0'
+        swipeLayout = 'com.daimajia.swipelayout:library:1.2.0@aar'
+        expandableTextView =  'at.blogc:expandabletextview:1.0.3'
+        expandableLayout = 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+        tableView = 'com.evrencoskun.library:tableview:0.8.5.1'
+
+        threeten = 'com.jakewharton.threetenabp:threetenabp:1.2.0'
+
+        lifecycle = "androidx.lifecycle:lifecycle-runtime:$archVersion"
+        lifecycleExt = "androidx.lifecycle:lifecycle-extensions:$archVersion"
+        lifecycleJava8 = "androidx.lifecycle:lifecycle-common-java8:$archVersion"
+        liveDataExt = "androidx.lifecycle:lifecycle-livedata-ktx:$archVersion"
+        lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:$archVersion"
+
+        room = "androidx.room:room-runtime:$archVersion"
+        roomCompiler = "androidx.room:room-compiler:$archVersion"
+        roomRxAdapter = "androidx.room:room-rxjava2:$archVersion"
+
+        pagingRuntime = "androidx.paging:paging-runtime:$pagingVersion"
+        pagingCommon = "androidx.paging:paging-common:$pagingVersion"
+        pagingRx = "androidx.paging:paging-rxjava2:$pagingVersion"
+
+        exoPlayer = "com.google.android.exoplayer:exoplayer:$exoPlayerVersion"
+        kizitonwose="com.github.kizitonwose:CalendarView:$kizitonwoseVersion"
+        desugaring= "com.android.tools:desugar_jdk_libs:1.1.5"
+        // Test Dependencies
+        junit = "junit:junit:4.12"
+        junitExt = "androidx.test.ext:junit:$androidTestVersion"
+        testCore = "androidx.test:core:$androidTestVersion"
+        testRunner = "androidx.test:runner:$androidTestRunnerVersion"
+        testRules = "androidx.test:rules:$androidTestRunnerVersion"
+        espresso = 'androidx.test.espresso:espresso-core:3.1.0'
+        roomTesting = "androidx.room:room-testing:$archVersion"
+
+        // Stetho
+        stetho = "com.facebook.stetho:stetho:$stethoVersion"
+        stethoOkhttp3 = "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.google.gms:google-services:4.3.8'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        google()
+        mavenCentral()
+        //jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

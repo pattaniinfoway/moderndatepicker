@@ -1,0 +1,205 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply from: rootProject.file('install-git-hooks.gradle')
+apply from: rootProject.file('ktlint.gradle')
+
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation":
+                                      "$projectDir/schemas".toString()]
+            }
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testBuildType "stage"
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        // Adds exported schema location as test app assets.
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        warningsAsErrors true
+        abortOnError false
+        baseline file("lint-baseline.xml")
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    signingConfigs {
+        moderndatepicker {
+            storeFile file('../keystores/moderdatepicker.jks')
+            storePassword 'DyUKeU1JVSgfDwv6n7A7ie4sc'
+            keyAlias 'moderndatepicker'
+            keyPassword 'DyUKeU1JVSgfDwv6n7A7ie4sc'
+        }
+    }
+
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug') variant.setIgnore(true)
+    }
+
+    buildTypes {
+        stage {
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix '.stage'
+            versionNameSuffix '-STAGE'
+            ext.enableCrashlytics = false
+            buildConfigField 'String', 'ENVIRONMENT', '"STAGE"'
+        }
+
+        prod {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            ext.enableCrashlytics = false
+            buildConfigField 'String', 'ENVIRONMENT', '"PROD"'
+        }
+
+        release {
+            initWith buildTypes.prod
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            ext.enableCrashlytics = true
+            buildConfigField 'String', 'ENVIRONMENT', '"RELEASE"'
+        }
+    }
+
+    flavorDimensions "brand"
+
+    productFlavors {
+        moderndatepicker {
+            dimension "brand"
+            applicationId "com.pti.moderndatepicker"
+            versionCode 1
+            versionName "1.0.0"
+            signingConfig signingConfigs.moderndatepicker
+        }
+
+
+    }
+}
+
+check.dependsOn ktlint
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    coreLibraryDesugaring rootProject.ext.desugaring
+    implementation rootProject.ext.kotlinStdLib
+    implementation rootProject.ext.kotlinReflect
+    implementation rootProject.ext.ktx
+    implementation rootProject.ext.vectorDrawable
+    implementation rootProject.ext.constraintLayout
+    implementation rootProject.ext.recyclerView
+    implementation rootProject.ext.navigationFragment
+    implementation rootProject.ext.navigationUi
+    implementation rootProject.ext.appCompat
+    implementation rootProject.ext.appCompatResources
+    implementation rootProject.ext.constraintLayout
+    implementation rootProject.ext.legacySupport
+    implementation rootProject.ext.appCompat
+    implementation rootProject.ext.cardView
+    implementation rootProject.ext.material
+    implementation rootProject.ext.androidXAnnotations
+    implementation rootProject.ext.koin
+    implementation rootProject.ext.koinJava
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.retrofitConverterGson
+    implementation rootProject.ext.rxJava
+    implementation rootProject.ext.rxKotlin
+    implementation rootProject.ext.rxAndroid
+    implementation rootProject.ext.rxRetrofitAdapter
+    implementation rootProject.ext.rxBinding
+    implementation rootProject.ext.multidex
+    implementation rootProject.ext.okhttp3
+    implementation rootProject.ext.okhttp3Logging
+    implementation rootProject.ext.circularImageView
+    implementation rootProject.ext.glide
+    implementation rootProject.ext.gson
+    implementation rootProject.ext.swipeLayout
+    implementation rootProject.ext.expandableTextView
+    compileOnly rootProject.ext.javaxProcessor
+    implementation rootProject.ext.expandableLayout
+    implementation rootProject.ext.eventBus
+    implementation rootProject.ext.tableView
+    implementation rootProject.ext.threeten
+    implementation rootProject.ext.lifecycle
+    implementation rootProject.ext.lifecycleExt
+    implementation rootProject.ext.lifecycleJava8
+    implementation rootProject.ext.liveDataExt
+    kapt rootProject.ext.lifecycleCompiler
+    implementation rootProject.ext.room
+    implementation rootProject.ext.roomRxAdapter
+    kapt rootProject.ext.roomCompiler
+    implementation rootProject.ext.pagingRuntime
+    implementation rootProject.ext.pagingCommon
+    implementation rootProject.ext.pagingRx
+
+    implementation rootProject.ext.stetho
+    implementation rootProject.ext.stethoOkhttp3
+
+    implementation rootProject.ext.exoPlayer
+    implementation rootProject.ext.kizitonwose
+
+    // Testing
+    testImplementation rootProject.ext.junit
+    androidTestImplementation(rootProject.ext.testCore)
+    androidTestImplementation(rootProject.ext.roomTesting)
+    androidTestImplementation(rootProject.ext.junitExt)
+    androidTestImplementation(rootProject.ext.espresso)
+    androidTestImplementation(rootProject.ext.testRunner)
+    androidTestImplementation(rootProject.ext.testRules)
+}
+
+task printVersion {
+    doLast {
+        android.productFlavors.all {
+            flavor ->
+                if (flavorName.matches(flavor.name)) {
+                    print flavor.versionName
+                }
+        }
+    }
+}
