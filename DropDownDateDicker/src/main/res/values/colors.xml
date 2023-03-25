@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Raw Colors -->
+
+    <color name="orangey_red">#fd4e30</color>
+    <color name="primary">@color/white</color>
+    <color name="primary_dark">@color/black</color>
+    <color name="orangey_red_50">#80fd4e30</color>
+    <color name="accent">@color/orangey_red</color>
+    <color name="accent_disabled">@color/orangey_red_50</color>
+    <color name="surface">@color/white</color>
+    <color name="choose_rate_color">#666666</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="calendar_divider">#e5e5e5</color>
+
+    <color name="trans">#FF000000</color>
+
+    <color name="calendar_bg">#f5f5f5</color>
+    <color name="blue">#1c48b4</color>
+
+
+
+
+    <!-- App Icon -->
+
+    <color name="ic_launcher_background">@color/orangey_red</color>
+
+    <!-- Notification -->
+
+    <color name="notification_color">@color/orangey_red</color>
+
+    <!-- Ripple -->
+    <color name="light_grey_blue">#adafb8</color>
+    <color name="default_ripple">@color/light_grey_blue</color>
+
+    <!-- Divider -->
+    <color name="light_periwinkle_three">#dddfea</color>
+    <color name="divider">@color/light_periwinkle_three</color>
+
+    <!-- Text -->
+
+
+
+    <!-- Lists -->
+
+    <color name="list_background">@color/white</color>
+    <!-- Text View | Link -->
+
+    <color name="text_view_link_default">@color/accent</color>
+    <color name="button_default_text">@color/white</color>
+    <!-- Text -->
+    <color name="slate">#43576c</color>
+    <color name="slate_50">#8043576c</color>
+    <color name="on_surface">@color/slate</color>
+    <color name="default_text">@color/on_surface</color>
+    <color name="on_surface_50">@color/slate_50</color>
+    <color name="navy">#041f3b</color>
+    <color name="default_text_50">@color/on_surface_50</color>
+    <color name="navy_50">#80041f3b</color>
+    <color name="navy_40">#66041f3b</color>
+    <color name="dark_text">@color/navy</color>
+    <color name="dark_text_50">@color/navy_50</color>
+    <!-- Text View | Form -->
+
+    <color name="text_view_form_title">@color/dark_text</color>
+    <color name="text_view_form_subtitle">@color/default_text</color>
+    <color name="text_view_form_section">@color/default_text</color>
+    <color name="text_view_form_label">@color/default_text</color>
+
+</resources>

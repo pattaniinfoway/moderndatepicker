@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region General -->
+
+    <style name="TextAppearance" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:textColor">@color/default_text</item>
+    </style>
+
+    <!-- region Font Families -->
+
+    <style name="TextAppearance.AvenirBlack" parent="TextAppearance">
+        <item name="android:fontFamily">@font/avenir_black</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy" parent="TextAppearance">
+        <item name="android:fontFamily">@font/avenir_heavy</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight" parent="TextAppearance">
+        <item name="android:fontFamily">@font/avenir_light</item>
+    </style>
+
+    <style name="TextAppearance.AvenirMedium" parent="TextAppearance">
+        <item name="android:fontFamily">@font/avenir_medium</item>
+    </style>
+
+    <style name="TextAppearance.AvenirRoman" parent="TextAppearance">
+        <item name="android:fontFamily">@font/avenir_roman</item>
+    </style>
+
+    <style name="TextAppearance.AvenirNextCondensedHeavy" parent="TextAppearance">
+        <item name="android:fontFamily">@font/avenir_next_condensed_heavy</item>
+    </style>
+
+    <style name="TextAppearance.MontserratExtraBold" parent="TextAppearance">
+        <item name="android:fontFamily">@font/montserrat_extra_bold</item>
+    </style>
+
+    <!-- endregion Font Families -->
+
+    <!-- region Text Sizes -->
+
+    <style name="TextAppearance.AvenirHeavy.Huge">
+        <item name="android:textSize">@dimen/text_size_huge</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy.ExtraLarge">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy.Big">
+        <item name="android:textSize">@dimen/text_size_big</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy.Tiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+    <style name="TextAppearance.AvenirHeavy.Mini">
+        <item name="android:textSize">@dimen/text_size_mini</item>
+    </style>
+
+    <style name="TextAppearance.AvenirMedium.Big">
+        <item name="android:textSize">@dimen/text_size_big</item>
+    </style>
+
+    <style name="TextAppearance.AvenirMedium.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="TextAppearance.AvenirMedium.Tiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+    <style name="TextAppearance.AvenirMedium.Mini">
+        <item name="android:textSize">@dimen/text_size_mini</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight.Huge">
+        <item name="android:textSize">@dimen/text_size_huge</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight.ExtraLarge">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight.Tiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+    <style name="TextAppearance.AvenirLight.Mini">
+        <item name="android:textSize">@dimen/text_size_mini</item>
+    </style>
+
+    <style name="TextAppearance.AvenirRoman.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="TextAppearance.AvenirRoman.Tiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+    <style name="TextAppearance.AvenirBlack.ExtraLarge">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="TextAppearance.AvenirBlack.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.MontserratExtraBold.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.AvenirNextCondensedHeavy.Huge">
+        <item name="android:textSize">@dimen/text_size_huge</item>
+    </style>
+
+    <!-- endregion Text Sizes -->
+
+    <!-- region Text Styles -->
+
+    <!-- Toolbar -->
+
+    <style name="TextAppearance.Toolbar" parent="TextAppearance.AvenirHeavy.Large" />
+
+    <style name="TextAppearance.Toolbar.Action" parent="TextAppearance.AvenirRoman" />
+
+    <style name="TextAppearance.Toolbar.Button" parent="TextAppearance.AvenirHeavy.Small" />
+
+    <style name="TextAppearance.Toolbar.Button.Small" parent="TextAppearance.AvenirHeavy.Tiny" />
+
+    <style name="TextAppearance.Toolbar.MenuItem" parent="TextAppearance.AvenirHeavy.Small">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+
+    <style name="TextAppearance.BottomNavigation.Item" parent="TextAppearance.AvenirHeavy.Mini" />
+
+    <!-- Bottom Sheet -->
+
+    <style name="TextAppearance.BottomSheet.Toolbar" parent="TextAppearance.AvenirHeavy" />
+
+    <style name="TextAppearance.BottomSheet.Action" parent="TextAppearance.AvenirHeavy" />
+
+    <style name="TextAppearance.BottomSheet.Url" parent="TextAppearance.AvenirMedium.Small" />
+
+    <style name="TextAppearance.BottomSheet.Label" parent="TextAppearance.AvenirRoman" />
+
+    <style name="TextAppearance.BottomSheet.Label.Outlined" parent="TextAppearance.AvenirMedium.Small" />
+
+    <style name="TextAppearance.BottomSheet.Switch.Title" parent="TextAppearance.AvenirMedium" />
+
+    <style name="TextAppearance.BottomSheet.Switch.Subtitle" parent="TextAppearance.AvenirMedium.Small" />
+
+    <style name="TextAppearance.BottomSheet.Section" parent="TextAppearance.AvenirMedium.Small" />
+
+    <!-- Tabs -->
+
+    <style name="TextAppearance.Tab" parent="TextAppearance.AvenirHeavy" />
+    <style name="CourseDetailTextAppearance.Tab" parent="TextAppearance.AvenirBlack" />
+
+    <!-- Links -->
+
+    <style name="TextAppearance.Link" parent="TextAppearance.AvenirHeavy">
+        <item name="android:textColor">@color/text_view_link_default</item>
+    </style>
+
+    <style name="TextAppearance.Link.Disclaimer" parent="TextAppearance.AvenirHeavy.Tiny">
+        <item name="android:textColor">@color/text_view_link_default</item>
+    </style>
+
+    <style name="TextAppearance.Link.Requires_Verification" parent="TextAppearance.AvenirRoman">
+        <item name="android:textColor">@color/text_view_link_default</item>
+    </style>
+
+    <!-- General Titles -->
+
+    <style name="TextAppearance.Title" parent="TextAppearance.AvenirHeavy.ExtraLarge" />
+
+    <style name="TextAppearance.Title.Bold" parent="TextAppearance.AvenirBlack.ExtraLarge" />
+
+    <style name="TextAppearance.Title.Small" parent="TextAppearance.AvenirHeavy.Large" />
+
+    <style name="TextAppearance.Subtitle" parent="TextAppearance.AvenirMedium" />
+
+    <style name="TextAppearance.Subtitle.Small" parent="TextAppearance.AvenirMedium.Small" />
+
+    <!-- Forms -->
+
+    <style name="TextAppearance.Form.Title" parent="TextAppearance.Title" />
+
+    <style name="TextAppearance.Form.Subtitle" parent="TextAppearance.AvenirRoman.Small" />
+
+    <style name="TextAppearance.Form.Section" parent="TextAppearance.AvenirHeavy" />
+
+    <style name="TextAppearance.Form.Error" parent="TextAppearance.AvenirMedium" />
+
+    <style name="TextAppearance.Form.Label" parent="TextAppearance.AvenirMedium" />
+
+    <!-- Input Fields -->
+
+    <style name="TextAppearance.InputField.Label" parent="TextAppearance.AvenirMedium.Small" />
+
+    <style name="TextAppearance.InputField.Value" parent="TextAppearance.AvenirMedium" />
+
+    <style name="TextAppearance.InputField.BottomMessage" parent="TextAppearance.AvenirMedium.Mini" />
+
+    <style name="TextAppearance.DatePicker.Value" parent="TextAppearance.AvenirHeavy.Small" />
+
+    <style name="TextAppearance.DatePicker.Inline" parent="TextAppearance.AvenirMedium.Small" />
+
+    <style name="TextAppearance.NumberPicker.Label" parent="TextAppearance.AvenirHeavy" />
+
+    <style name="TextAppearance.CheckBox.Label" parent="TextAppearance.AvenirRoman.Tiny" />
+
+    <style name="TextAppearance.RadioButton" parent="TextAppearance.AvenirHeavy" />
+
+    <style name="TextAppearance.RangeSeeker.Value" parent="TextAppearance.AvenirMedium.Small" />
+
+    <!-- Buttons -->
+
+    <style name="TextAppearance.Button.Default" parent="TextAppearance.AvenirHeavy">
+        <item name="android:textColor">@color/button_default_text</item>
+        <item name="android:textSize">@dimen/button_default_text_size</item>
+    </style>
+
+    <style name="TextAppearance.Button" parent="TextAppearance.AvenirHeavy" />
+
+    <style name="TextAppearance.Button.Thick" parent="TextAppearance.AvenirHeavy.Big" />
+
+    <style name="TextAppearance.Button.Thin" parent="TextAppearance.AvenirMedium" />
+
+    <style name="TextAppearance.Button.Text" parent="TextAppearance.AvenirBlack" />
+
+    <style name="TextAppearance.Button.Filter.Label" parent="TextAppearance.AvenirMedium.Tiny" />
+
+    <style name="TextAppearance.Button.Filter.Value" parent="TextAppearance.AvenirMedium" />
+
+    <style name="TextAppearance.Button.Link" parent="TextAppearance.AvenirMedium.Big" />
+
+    <!-- Buttons -->
+
+
+
+
+    <!-- Banners -->
+
+    <style name="TextAppearance.Banner.Title" parent="TextAppearance.AvenirBlack" />
+
+    <style name="TextAppearance.Banner.Subtitle" parent="TextAppearance.AvenirRoman" />
+
+    <!-- Misc TextViews -->
+
+    <style name="TextAppearance.Disclaimer" parent="TextAppearance.AvenirRoman.Tiny" />
+
+
+</resources>

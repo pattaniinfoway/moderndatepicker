@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ........................................................................ SupremeGolf v2 -->
+
+    <style name="AppTheme" parent="Base.Theme.AppTheme" />
+
+    <!-- Base application theme -->
+
+    <style name="Base.Theme.AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Button.Default</item>
+
+    </style>
+    <style name="Widget.dropdowndatepicker.TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/TextAppearance</item>
+    </style>
+
+    <style name="Widget.dropdowndatepicker.TextView.Form.Label" parent="Widget.dropdowndatepicker.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.InputField.Label</item>
+        <item name="android:textColor">@color/text_view_form_label</item>
+    </style>
+
+
+    <style name="Widget.dropdowndatepicker.TextView.Form.Rounded.BottomMessage" parent="Widget.dropdowndatepicker.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.InputField.BottomMessage</item>
+    </style>
+
+    <style name="AppTheme.Transparent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+
+</resources>
