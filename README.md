@@ -2,7 +2,7 @@
 
 ### Developed by Gautam Pattani   ###
 ### Minimum Target ###
-* Android 4.1
+* Android 8
 * Madern Date Picker
 
 ### Building and running from the command line ###
